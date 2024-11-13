@@ -246,7 +246,8 @@ function getMerchantCoupons(event) {
 
 function displayMerchantCoupons(coupons) {
   show([couponsView])
-  hide([merchantsView, itemsView])
+  hide([merchantsView, itemsView, addNewButton])
+  showingText.innerText = `All Coupons for Requested Merchant`
   couponsView.innerHTML = ``
     coupons.forEach(coupon => {
       couponsView.innerHTML +=
